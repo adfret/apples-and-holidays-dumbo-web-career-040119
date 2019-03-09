@@ -74,12 +74,12 @@ arrd << i.capitalize.to_s
 end
 
 art = []
-holiday_supplies.each do |i,v|
+holiday_hash.each do |i,v|
 art << v
 end
 
 ark,arb = [], []
-holiday_supplies.each do |i,v|
+holiday_hash.each do |i,v|
 v.each do |j,k|
 ark << j
 arb << k
