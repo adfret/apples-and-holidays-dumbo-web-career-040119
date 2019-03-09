@@ -66,7 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
 
        supply = supply.join(", ")
       puts "  #{holiday}: #{supply}"
-
+end
 
 
   # iterate through holiday_hash and print items such that your readout resembles:
@@ -111,8 +111,6 @@ def all_supplies_in_holidays(holiday_hash)
 #   #{arrd[3]}:
 #     #{ark[4].capitalize}: #{arb[6]}"
 
-
-end
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
