@@ -54,6 +54,21 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
+  holiday_hash.each do |season, data|
+    puts "#{season.to_s.capitalize!}:"
+    data.each do |holiday, supply|
+      array = holiday.to_s.split("_")
+      final_holiday = []
+        array.each do |x|
+          final_holiday << x.capitalize!
+        end
+      holiday = final_holiday.join(" ")
+
+       supply = supply.join(", ")
+      puts "  #{holiday}: #{supply}"
+
+
+
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
   #   Christmas: Lights, Wreath
@@ -61,40 +76,40 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  arr = []
-holiday_hash.each do |i,v|
-arr << i
-end
+#   arr = []
+# holiday_hash.each do |i,v|
+# arr << i
+# end
 
 #get how winter months needs to appear
-arrd =[]
-arr.each do |i|
-arrd << i.capitalize.to_s
-end
-
-art = []
-holiday_hash.each do |i,v|
-art << v
-end
-
-ark,arb = [], []
-holiday_hash.each do |i,v|
-v.each do |j,k|
-ark << j
-arb << k
-end
-end
-
-arb = arb.flatten
-"#{arrd[0]}:
-    #{ark[0].capitalize}: #{arb[0]}, #{arb[1]}
-    #{ark[1].capitalize}: #{arb[2]}
-  #{arrd[1]}:
-    #{ark[2].capitalize}: #{arb[3]}, #{arb[4]}
-  #{arrd[2]}:
-    #{ark[3].capitalize}: #{arb[5]}
-  #{arrd[3]}:
-    #{ark[4].capitalize}: #{arb[6]}"
+# arrd =[]
+# arr.each do |i|
+# arrd << i.capitalize.to_s
+# end
+#
+# art = []
+# holiday_hash.each do |i,v|
+# art << v
+# end
+#
+# ark,arb = [], []
+# holiday_hash.each do |i,v|
+# v.each do |j,k|
+# ark << j
+# arb << k
+# end
+# end
+#
+# arb = arb.flatten
+# "#{arrd[0]}:
+#     #{ark[0].capitalize}: #{arb[0]}, #{arb[1]}
+#     #{ark[1].capitalize}: #{arb[2]}
+#   #{arrd[1]}:
+#     #{ark[2].capitalize}: #{arb[3]}, #{arb[4]}
+#   #{arrd[2]}:
+#     #{ark[3].capitalize}: #{arb[5]}
+#   #{arrd[3]}:
+#     #{ark[4].capitalize}: #{arb[6]}"
 
 
 end
