@@ -62,6 +62,48 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+  arr = []
+holiday_supplies.each do |i,v|
+arr << i
+end 
+
+#get how winter months needs to appear
+arrd =[]
+arr.each do |i|
+arrd << i.capitalize.to_s
+end 
+
+art = []
+holiday_supplies.each do |i,v|
+art << v
+end 
+
+
+
+
+
+
+
+ark,arb = [], []
+holiday_supplies.each do |i,v| 
+v.each do |j,k|
+ark << j
+arb << k
+end 
+end 
+
+arb = arb.flatten
+ puts "#{arrd[0]}:
+    #{ark[0].capitalize}: #{arb[0]}, #{arb[1]}
+    #{ark[1].capitalize}: #{arb[2]}   
+  #{arrd[1]}:
+    #{ark[2].capitalize}: #{arb[3]}, #{arb[4]}
+  #{arrd[2]}: 
+    #{ark[3].capitalize}: #{arb[5]}
+  #{arrd[3]}: 
+    #{ark[4].capitalize}: #{arb[6]}"
+
+
 
 end
 
