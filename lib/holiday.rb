@@ -87,7 +87,7 @@ end
 end
 
 arb = arb.flatten
- puts "#{arrd[0]}:
+"#{arrd[0]}:
     #{ark[0].capitalize}: #{arb[0]}, #{arb[1]}
     #{ark[1].capitalize}: #{arb[2]}
   #{arrd[1]}:
